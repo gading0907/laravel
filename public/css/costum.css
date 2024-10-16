@@ -1,0 +1,52 @@
+.bg-warning {
+    background-color: #FFEB3B !important;
+    border-radius: 50px 20px 50px 20px; /* Bentuk sudut yang tidak simetris */
+    padding: 50px;
+    margin: 20px; /* Memberikan jarak dari semua ujung layar */
+    position: relative;
+    overflow: hidden;
+}
+
+
+.container-fluid::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.3); /* Efek lingkaran putih transparan */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.container-fluid::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.3); /* Efek lingkaran putih transparan */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.bg-warning .row {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-danger {
+    background-color: #FF3B3F;
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efek shadow pada tombol */
+}
+
+.btn-danger:hover {
+    background-color: #D32F2F;
+    transform: translateY(-3px); /* Efek hover tombol */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
